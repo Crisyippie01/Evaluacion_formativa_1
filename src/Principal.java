@@ -8,13 +8,12 @@ import java.util.Scanner;
  * @author Crisyippie
  * @version 05-09-2024
  */
-public class main {
+public class Principal {
     
     public static void main(String[] args) {
         
         Scanner leer = new Scanner(System.in);
-        int opcion,edad,rut, nroDocente,codAsignatura;
-        Double opcion2;
+        int opcion,edad,rut, nroDocente,codAsignatura, nota;
         String nombreAsignatura,nombreAlumno,fechaNacimiento,fechaIngreso,nombreDocente,sede;
         
         Alumno alumno1 = new Alumno();
@@ -57,7 +56,7 @@ public class main {
                 nombreDocente = leer.next();
                 docente1.setNombre(nombreDocente);
                 
-                System.out.println("Fecha Nacimiento: ");
+                System.out.println("Fecha Ingreso: ");
                 fechaIngreso = leer.next();
                 docente1.setFechaIngreso(fechaIngreso);
                 
@@ -68,6 +67,10 @@ public class main {
                 System.out.println("N° Docente: ");
                 nroDocente = leer.nextInt();
                 docente1.setNroDocente(nroDocente);
+                
+                System.out.println("Sede: ");
+                sede = leer.next();
+                docente1.setSede(sede);
                
             }
             else if (opcion == 3) {
@@ -107,16 +110,16 @@ public class main {
                 }
                 
                 System.out.println("Nota 1: ");
-                opcion2 = leer.nextDouble();
-                asignatura1.getNota1();
+                nota = leer.nextInt();
+                asignatura1.setNota1(nota);
                 
                 System.out.println("Nota 2: ");
-                opcion2 = leer.nextDouble();
-                asignatura1.getNota2();
+                nota = leer.nextInt();
+                asignatura1.setNota2(nota);
                 
                 System.out.println("Nota 3: ");
-                opcion2 = leer.nextDouble();
-                asignatura1.getNota3();
+                nota = leer.nextInt();
+                asignatura1.setNota3(nota);
                 
                 
                 System.out.println(asignatura1.toString());
