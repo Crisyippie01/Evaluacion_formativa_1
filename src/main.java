@@ -13,10 +13,14 @@ public class main {
     public static void main(String[] args) {
         
         Scanner leer = new Scanner(System.in);
-        int opcion,edad,rut, nroDocente;
-        String nombreAlumno,fechaNacimiento,fechaIngreso,nombreDocente,sede,nroAsignatura;
+        int opcion,edad,rut, nroDocente,codAsignatura;
+        Double opcion2;
+        String nombreAsignatura,nombreAlumno,fechaNacimiento,fechaIngreso,nombreDocente,sede;
+        
         Alumno alumno1 = new Alumno();
+        Alumno alumno2 = new Alumno();
         Docente docente1 = new Docente();
+        Docente docente2 = new Docente();
         Asignatura asignatura1 = new Asignatura();
         
         
@@ -67,8 +71,55 @@ public class main {
                
             }
             else if (opcion == 3) {
-                System.out.println("[- Ingresar Datos Asignatura -]");
+                System.out.println("[- Ingresar Datos Asignatura -]\n");
+                System.out.println("Codigo Asignatura: ");
+                codAsignatura = leer.nextInt();
+                asignatura1.setCodAsignatura(codAsignatura);
                 
+                System.out.println("Nombre Asignatura: ");
+                nombreAsignatura = leer.next();
+                asignatura1.setNombreAsignatura(nombreAsignatura);
+                
+                System.out.println("Estudiantes: ");
+                System.out.println("1. "+alumno1.toString() );
+                System.out.println("2. "+alumno2.toString());
+                System.out.println("Opcion: ");
+                opcion = leer.nextInt();
+                if (opcion == 1) {
+                    
+                    asignatura1.setNombreEstudiante(alumno1.getNombre());
+                }
+                else{
+                    asignatura1.setNombreEstudiante(alumno2.getNombre());
+                }
+                
+                System.out.println("Docentes: ");
+                System.out.println("1. "+docente1.toString());
+                System.out.println("2. "+docente2.toString());
+                System.out.println("Opcion: ");
+                opcion = leer.nextInt();
+                if (opcion == 1) {
+                    
+                    asignatura1.setNombreDocente(docente1.getNombre());
+                }
+                else{
+                    asignatura1.setNombreEstudiante(docente2.getNombre());
+                }
+                
+                System.out.println("Nota 1: ");
+                opcion2 = leer.nextDouble();
+                asignatura1.getNota1();
+                
+                System.out.println("Nota 2: ");
+                opcion2 = leer.nextDouble();
+                asignatura1.getNota2();
+                
+                System.out.println("Nota 3: ");
+                opcion2 = leer.nextDouble();
+                asignatura1.getNota3();
+                
+                
+                System.out.println(asignatura1.toString());
             }
         } while (opcion != 4);
         

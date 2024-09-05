@@ -56,6 +56,11 @@ public class Alumno {
     public void setRut(int rut) {
         this.rut = rut;
     }
+
+    @Override
+    public String toString() {
+        return "Alumno{" + "nombre=" + nombre + ", fechaNacimiento=" + fechaNacimiento + ", edad=" + edad + ", rut=" + rut + '}';
+    }
     
     
 }

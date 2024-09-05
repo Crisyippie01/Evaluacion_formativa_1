@@ -63,6 +63,11 @@ public class Docente {
     public void setRut(int rut) {
         this.rut = rut;
     }
+
+    @Override
+    public String toString() {
+        return "Docente{" + "nombre=" + nombre + ", fechaIngreso=" + fechaIngreso + ", sede=" + sede + ", nroDocente=" + nroDocente + ", rut=" + rut + '}';
+    }
     
     
 }

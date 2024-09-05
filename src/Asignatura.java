@@ -81,6 +81,12 @@ public class Asignatura {
     public void setNombreDocente(String nombreDocente) {
         this.nombreDocente = nombreDocente;
     }
+
+    @Override
+    public String toString() {
+        return "Asignatura{" + "codAsignatura=" + codAsignatura + ", nota1=" + nota1 + ", nota2=" + nota2 + ", nota3=" + nota3 + ", nombreAsignatura=" + nombreAsignatura + ", nombreEstudiante=" + nombreEstudiante + ", nombreDocente=" + nombreDocente + '}';
+    }
+    
     
     
 }
